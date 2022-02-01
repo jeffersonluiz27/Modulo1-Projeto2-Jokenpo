@@ -10,7 +10,6 @@ Utilizando os conceitos aprendidos até estruturas de repetição, crie um progr
 e tesoura (Jokenpô) com você.
 
 
-
 ### O programa tem que:
 
 
