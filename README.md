@@ -1,8 +1,8 @@
 # Projeto 02 - Jokenpô
 
-#### Linguagem: JavaScript
-#### Motor: NodeJS
-#### Framework: JavaScript Vanilla
+##### Linguagem: JavaScript
+##### Motor: NodeJS
+##### Framework: JavaScript Vanilla
 
 Lembrando que o tema da semana é: ARRAY e FOR.
 Então precisam usar os dois no projeto!
