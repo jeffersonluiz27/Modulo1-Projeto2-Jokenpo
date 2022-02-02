@@ -12,17 +12,20 @@ quantidade de rodadas, se não finalize o programa.
 
  */
 
+// Chamada do prompt
 const prompt = require('prompt-sync')();
 
+// Variavel que controla novo jogo
 let newGame = true;
 
+// Função para verificar a resposta
 function respostas(pergunta) {
   while (true) {
-    let resp = +prompt(pergunta);
+    let resposta = +prompt(pergunta);
 
-    if (resp == 1) {
+    if (resposta == 1) {
       return 1;
-    } else if (resp == 2) {
+    } else if (resposta == 2) {
       return 2;
     } else {
       console.clear();
@@ -31,6 +34,8 @@ function respostas(pergunta) {
   }
 }
 
+
+// Corpo principal do programa
 do {
   let rodadas = +prompt('Informe a quantidade de rodas: ');
 
