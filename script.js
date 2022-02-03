@@ -40,10 +40,8 @@ do {
     // Exibe o grade vencedor
     fim++;
     if (fim == rodadas) {
-
-      console.log('FIM');  
+      console.log('FIM');
     }
-    
   }
 
   //Pergunta se jogador quer reiniciar o jogo
