@@ -5,7 +5,6 @@
 ##### Framework: JavaScript Vanilla
 
 Lembrando que o tema da semana é: ARRAY e FOR.
-Então precisam usar os dois no projeto!
 
 Utilizando os conceitos aprendidos até estruturas de repetição, crie um programa que jogue pedra, papel
 e tesoura (Jokenpô) com você.
