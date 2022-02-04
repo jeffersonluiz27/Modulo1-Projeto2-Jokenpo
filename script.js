@@ -14,13 +14,17 @@ let jogada = ['PEDRA', 'PAPEL', 'TESOURA'];
 //------------- MAIN----------------//
 // Corpo principal do programa
 do {
+  console.clear();
+  console.log('Bem Vindo ao Jogo: Pedra, Papel ou Tesoura');
   let rodadas = +prompt('Informe a quantidade de rodas: ');
+  console.clear();
   vitoriaComputador = 0;
   vitoriaJogador = 0;
   let fim = 0;
 
   for (let i = 1; i <= rodadas; i++) {
-    console.log(`Rodada ${i}\n`);
+    console.log(`Rodada ${i}`);
+    console.log('');
     let computador = '';
     let jogador = '';
 
@@ -32,15 +36,28 @@ do {
     jogador = escolhaJogador(); // Valida escolha
 
     //Verifica quem ganhou a rodada
+    console.log(`\nComputador: ${computador}, Jogador: ${jogador}`);
     console.log(campeaoRodada(computador, jogador));
-    console.log(
-      `Placar: ${vitoriaComputador} Computador | ${vitoriaJogador} Jogador\n`
-    );
 
-    // Exibe o grade vencedor
+    // Exibe o placar e o grade vencedor
     fim++;
-    if (fim == rodadas) {
-      console.log('FIM');
+    if (fim != rodadas) {
+      console.log(
+        `Placar: ${vitoriaComputador} Computador | ${vitoriaJogador} Jogador\n`
+      );
+    } else {
+      console.log(
+        `Placar Final: ${vitoriaComputador} Computador | ${vitoriaJogador} Jogador\n`
+      );
+      if (vitoriaComputador > vitoriaJogador) {
+        console.log(
+          `O Computador foi o grande Campeão! \nMais sorte na próxima!`
+        );
+      } else if (vitoriaComputador < vitoriaJogador) {
+        console.log(`Você foi o grande Campeão! \nParabéns!!`);
+      } else {
+        console.log(`Ishi! Deu empate! \nQue tal jogar mais?`);
+      }
     }
   }
 
@@ -48,7 +65,6 @@ do {
   console.log();
   resp = respostas('Deseja jogar de novo? (1 - SIM / 2 - NÃO): ');
   if (resp == 1) {
-    console.clear();
     newGame = true;
   } else {
     newGame = false;
@@ -90,38 +106,35 @@ function escolhaJogador() {
 
 //Função que verifica quem ganhou a rodada
 function campeaoRodada(computador, jogador) {
-  console.clear();
-  console.log(`Computador: ${computador}, Jogador: ${jogador}`);
-
   if (computador == 'PEDRA') {
     if (jogador == 'TESOURA') {
       vitoriaComputador++;
-      return 'O Computador venceu essa!\n';
+      return 'O Computador venceu essa!';
     } else if (jogador == 'PAPEL') {
       vitoriaJogador++;
-      return 'Voce venceu essa!\n';
+      return 'Voce venceu essa!';
     } else {
-      return 'Deu empate!\n';
+      return 'Deu empate!';
     }
   } else if (computador == 'PAPEL') {
     if (jogador == 'PEDRA') {
       vitoriaComputador++;
-      return 'O Computador venceu essa!\n';
+      return 'O Computador venceu essa!';
     } else if (jogador == 'TESOURA') {
       vitoriaJogador++;
-      return 'Voce venceu essa!\n';
+      return 'Voce venceu essa!';
     } else {
-      return 'Deu empate!\n';
+      return 'Deu empate!';
     }
   } else if (computador == 'TESOURA') {
     if (jogador == 'PAPEL') {
       vitoriaComputador++;
-      return 'O Computador venceu essa!\n';
+      return 'O Computador venceu essa!';
     } else if (jogador == 'PEDRA') {
       vitoriaJogador++;
-      return 'Voce venceu essa!\n';
+      return 'Voce venceu essa!';
     } else {
-      return 'Deu empate!\n';
+      return 'Deu empate!';
     }
   }
 }
